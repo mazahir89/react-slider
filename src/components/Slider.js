@@ -10,6 +10,8 @@ export default class Slider extends Component {
 
   handleOnChange = e => this.setState({ value: e.target.value });
 
+  onChange = e => this.setState({ value: e.target.value });
+
   render() {
     return (
       <Styles>
@@ -21,7 +23,17 @@ export default class Slider extends Component {
           className="slider"
           onChange={this.handleOnChange}
         />
+
         <div className="value">{this.state.value}</div>
+
+        <div>
+          <input
+            type="number"
+            value={this.state.value}
+            className="inputValue"
+            onChange={this.onChange}
+          />
+        </div>
       </Styles>
     );
   }
