@@ -9,7 +9,7 @@ class App extends Component {
     return (
       <Styles>
         <div className="App">
-          <Slider />
+          <Slider initialValue={5000} />
         </div>
       </Styles>
     );
